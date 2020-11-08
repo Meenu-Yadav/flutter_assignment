@@ -72,5 +72,5 @@ List<dynamic> icons = [
     'color': Colors.green[100],
     'colorHover': Colors.green,
     'icon': Icons.comment,
-  }
+  },
 ];

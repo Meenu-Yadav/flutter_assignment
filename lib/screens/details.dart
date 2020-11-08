@@ -27,18 +27,36 @@ class Details extends StatelessWidget {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Image.asset(
-              "assets/tachLogo.png",
-              alignment: Alignment.center,
-              height: 125,
-              width: 125,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Image.asset(
+                  "assets/tachLogo.png",
+                  alignment: Alignment.center,
+                  height: 125,
+                  width: 125,
+                ),
+                  Container(
+                    width: 80,
+                    height: 80,
+                    decoration: new BoxDecoration(
+                      color: customIcon.colorHover,
+                      shape: BoxShape.circle,
+                    ),
+                    child: new Icon(
+                      customIcon.icon,
+                      color: Colors.black,
+                      size: 60,
+                    ),
+                  ),
+              ],
             ),
             SizedBox(
               height: 20,
             ),
             Container(
               height: MediaQuery.of(context).size.height - 300,
-              decoration: BoxDecoration(color: Colors.cyanAccent[200]),
+              decoration: BoxDecoration(color: customIcon.colorHover),
               child: Column(
                 children: [
                   Padding(
