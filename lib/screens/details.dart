@@ -27,28 +27,38 @@ class Details extends StatelessWidget {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            Stack(
+              alignment: Alignment.center,
               children: [
-                Image.asset(
-                  "assets/tachLogo.png",
-                  alignment: Alignment.center,
-                  height: 125,
-                  width: 125,
-                ),
-                  Container(
-                    width: 80,
-                    height: 80,
-                    decoration: new BoxDecoration(
-                      color: customIcon.colorHover,
-                      shape: BoxShape.circle,
-                    ),
-                    child: new Icon(
-                      customIcon.icon,
-                      color: Colors.black,
-                      size: 60,
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Container(
+                      width: 80,
+                      height: 80,
+                      decoration: new BoxDecoration(
+                        color: customIcon.colorHover,
+                        shape: BoxShape.circle,
+                      ),
+                      child: new Icon(
+                        customIcon.icon,
+                        color: Colors.black,
+                        size: 60,
+                      ),
                     ),
                   ),
+                ),
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: Image.asset(
+                    "assets/tachLogo.png",
+                    alignment: Alignment.center,
+                    height: 125,
+                    width: 125,
+                  ),
+                ),
+
               ],
             ),
             SizedBox(
